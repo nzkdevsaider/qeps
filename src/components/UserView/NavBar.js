@@ -8,22 +8,25 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-  navigationMenuTriggerStyle
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import Logo from "../Branding/Logo";
 
 const NavBar = () => {
   return (
-    <navbar className="flex flex-row justify-between bg-red-500 shadow-xl p-5">
+    <navbar className="flex flex-row justify-between items-center bg-red-500 shadow-sm p-5">
       <div>
-        <h1 className="text-3xl font-bold text-white">qeps</h1>
+        <Logo width={200} height={50} />
       </div>
       <div>
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link href="/login" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>Panel de control</NavigationMenuLink>
+              <Link href="/dashboard" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Panel de control
+                </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
