@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="grid grid-cols-1 gap-5">
       <div className="flex md:flex-row flex-col justify-center items-center p-16 my-16 gap-24">
@@ -12,7 +12,12 @@ export default function Home() {
           <h2 className="font-light text-3xl">de manera eficiente</h2>
         </div>
         <div>
-          <Image src="/assets/un1.svg" width={600} height={600} />
+          <Image
+            src="/assets/un1.svg"
+            alt="Ilustracion"
+            width={600}
+            height={600}
+          />
         </div>
       </div>
       <div className="flex flex-col justify-center items-center p-20 my-16 space-y-5">
