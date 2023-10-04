@@ -1,10 +1,11 @@
 import "@/assets/globals.css";
 import { Inter } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Inicio de sesion",
+  title: "Control de acceso",
   description: "Inicia sesion o registrate para acceder a tu cuenta",
 };
 
@@ -13,6 +14,7 @@ export default async function LoginLayout({ children }) {
     <html lang="es">
       <body className={inter.className}>
         <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Logo = ({ icon, width, height, color = "black" }) => {
+const Logo = ({ icon, width, height }) => {
   return (
     <div className="logo flex flex-row gap-4 items-center">
       <Image
@@ -8,7 +8,6 @@ const Logo = ({ icon, width, height, color = "black" }) => {
         alt="Logo"
         width={width}
         height={height}
-        className={`fill-${color}`}
       />
     </div>
   );
