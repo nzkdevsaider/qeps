@@ -1,5 +1,7 @@
 import Logo from "@/components/Branding/Logo";
 import Messages from "./message";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function Login() {
   return (
@@ -18,31 +20,24 @@ export default function Login() {
         <label className="text-md" type="email">
           Correo eléctronico
         </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
+        <Input
+          type="email"
           name="email"
           placeholder="nombre@ejemplo.com"
           required
         />
+
         <label className="text-md" type="password">
           Contraseña
         </label>
-        <input
-          className="rounded-md px-4 py-2 bg-inherit border mb-6"
+        <Input
           type="password"
           name="password"
           placeholder="••••••••"
           required
         />
-        <button className="bg-green-700 rounded px-4 py-2 text-white mb-2">
-          Iniciar sesión
-        </button>
-        <button
-          formAction="/auth/sign-up"
-          className="border border-gray-700 rounded px-4 py-2 text-black mb-2"
-        >
-          Registrarse
-        </button>
+        <Button>Iniciar sesión</Button>
+        <Button variant="secondary" formAction="/auth/sign-up">Registrarse</Button>
       </form>
     </div>
   );

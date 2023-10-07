@@ -1,11 +1,11 @@
+import { Inter } from "next/font/google";
 import NavBar from "@/components/UserView/NavBar";
 import "@/assets/globals.css";
-import { Inter } from "next/font/google";
 import Footer from "@/components/UserView/Footer";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "qeps",
@@ -21,8 +21,8 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="es">
-      <body className={inter.className}>
-        <NavBar user={user}/>
+      <body className={font.className}>
+        <NavBar user={user} />
         <main>{children}</main>
         <Footer />
       </body>

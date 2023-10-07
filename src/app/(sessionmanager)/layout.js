@@ -9,12 +9,14 @@ export const metadata = {
   description: "Inicia sesion o registrate para acceder a tu cuenta",
 };
 
-export default async function LoginLayout({ children }) {
+export default function LoginLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
-        <main>{children}</main>
-        <Toaster />
+        <main>
+          {children}
+          <Toaster />
+        </main>
       </body>
     </html>
   );
