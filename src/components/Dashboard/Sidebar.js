@@ -5,7 +5,7 @@ import { SidebarProvider } from "@/context/sidebar";
 const Sidebar = () => {
   return (
     <SidebarProvider>
-      <SidebarContent />
+      <SidebarContent/>
     </SidebarProvider>
   );
 };

@@ -33,7 +33,7 @@ const SidebarContent = () => {
   return (
     <aside
       id="default-sidebar"
-      className="flex flex-col h-screen justify-between bg-secondary w-[13%]"
+      className="flex flex-col px-3 h-screen justify-between bg-secondary w-[13%]"
     >
       <SidebarHeader />
       <SidebarNav />

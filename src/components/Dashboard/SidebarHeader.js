@@ -1,6 +1,6 @@
 import Logo from "../Branding/Logo";
 
-const SidebarHeader = () => {
+const SidebarHeader = async () => {
   return (
     <div className="flex flex-row justify-center items-center space-x-5 m-5">
       <div className="bg-primary rounded-xl p-3">
