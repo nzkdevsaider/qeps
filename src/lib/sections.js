@@ -9,12 +9,12 @@ import {
 export const sections = [
   {
     name: "Dashboard",
-    href: "#",
+    href: "/dashboard",
     icon: IconDashboard,
   },
   {
     name: "Clientes",
-    href: "/dashboard/clients",
+    href: "/dashboard/customers",
     icon: IconUsers,
   },
   {
