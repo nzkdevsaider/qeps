@@ -12,7 +12,7 @@ export default function OnboardLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
-        <main>{children}</main>
+        <main className="flex flex-col justify-center items-center h-screen bg-gradient-to-tr backdrop-blur-xl from-green-600 to-gray-950">{children}</main>
       </body>
     </html>
   );
