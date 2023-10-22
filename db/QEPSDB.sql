@@ -1,7 +1,15 @@
+CREATE TABLE usuarios (
+  "id" uuid PRIMARY KEY,
+  "created_at" timestamp NOT NULL,
+  "nombre" text NOT NULL,
+  "apellido" text NOT NULL,
+  "username" text NOT NULL CHECK (username ~ '^[a-zA-Z0-9]+$')
+);
+
 CREATE TABLE "proyectos" (
   "id" uuid PRIMARY KEY,
   "created_at" timestamp NOT NULL,
-  "id_owner" uuid NOT NULL
+  "id_user" uuid NOT NULL
 );
 
 CREATE TABLE "proyecto_info" (
@@ -102,6 +110,8 @@ CREATE TABLE "pagos_info" (
   "monto" int,
   "description" text
 );
+
+ALTER TABLE "proyectos" ADD FOREIGN KEY ("id_user") REFERENCES "usuarios" ("id");
 
 ALTER TABLE "proyecto_info" ADD FOREIGN KEY ("id_proyecto") REFERENCES "proyectos" ("id");
 

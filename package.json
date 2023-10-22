@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@types/react": "18.2.23",
+    "supabase": "^1.106.1",
     "typescript": "5.2.2"
   }
 }

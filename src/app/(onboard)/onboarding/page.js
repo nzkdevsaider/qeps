@@ -1,10 +1,14 @@
+import { OnboardForm } from "@/components/Forms/OnboardForm";
+
 const page = () => {
-    return (
-        <div className="flex flex-col w-2/5 h-3/4 bg-white rounded-sm p-5 space-y-4">
-            <h1 className="text-3xl font-bold">Empieza creando tu primera organización</h1>
-            <p>Form</p>
-        </div>
-    );
-}
+  return (
+    <div className="flex flex-col w-2/5 h-auto bg-white rounded-sm p-5 space-y-5">
+      <h1 className="text-4xl font-bold">
+        Rellena los datos necesarios para comenzar
+      </h1>
+      <OnboardForm />
+    </div>
+  );
+};
 
 export default page;
