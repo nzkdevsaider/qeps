@@ -5,10 +5,9 @@ import { NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 
 export async function POST(request) {
-  const requestUrl = new URL(request.url);
-  const formData = await request.formData();
-  const email = String(formData.get("email"));
-  const password = String(formData.get("password"));
+  const formData = await request.json();
+  const email = String(formData.email);
+  const password = String(formData.password);
   const supabase = createRouteHandlerClient({ cookies });
 
   const { error } = await supabase.auth.signUp({
@@ -20,20 +19,13 @@ export async function POST(request) {
   });
 
   if (error) {
-    return NextResponse.redirect(
-      `${requestUrl.origin}/login?error=Could not authenticate user`,
-      {
-        // a 301 status is required to redirect from a POST to a GET route
-        status: 301,
-      }
+    // Send an error status to the client
+    return NextResponse.json(
+      { message: "No se pudo autenticar este usuario." },
+      { status: 404 }
     );
   }
 
-  return NextResponse.redirect(
-    `${requestUrl.origin}/login?message=Check email to continue sign in process`,
-    {
-      // a 301 status is required to redirect from a POST to a GET route
-      status: 301,
-    }
-  );
+  // Redirect to /dashboard after successful signup
+  return NextResponse.json({ message: "Registro exitoso" });
 }

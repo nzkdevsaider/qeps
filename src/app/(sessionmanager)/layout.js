@@ -1,6 +1,6 @@
 import "@/assets/globals.css";
 import { Inter } from "next/font/google";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +13,8 @@ export default function LoginLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
-        <main>
-          {children}
-          <Toaster />
-        </main>
+        <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

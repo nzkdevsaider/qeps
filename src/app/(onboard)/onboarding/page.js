@@ -1,3 +1,4 @@
+import LogoutButton from "@/components/Buttons/LogoutButton";
 import { OnboardForm } from "@/components/Forms/OnboardForm";
 
 const page = () => {
@@ -7,6 +8,7 @@ const page = () => {
         Rellena los datos necesarios para comenzar
       </h1>
       <OnboardForm />
+      <LogoutButton/>
     </div>
   );
 };
