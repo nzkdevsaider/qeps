@@ -24,5 +24,5 @@ export async function POST(request) {
   }
 
   // Redirect to /dashboard after successful signup
-  return NextResponse.json({ message: "Registro exitoso" });
+  return NextResponse.json({ message: "Registro exitoso, revista tu correo eléctronico" });
 }

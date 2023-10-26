@@ -9,14 +9,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default async function DashboardLayout({ children }) {
   const supabase = createServerComponentClient({ cookies });
-  const { data: user } = await supabase.auth.getUser();
-  const { data: projects } = await supabase
-    .from("projects")
-    .select("*")
-    .eq("id_owner", user.id);
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const { data } = await supabase
+    .from("proyectos")
+    .select("id_user")
+    .eq("id_user", user.id);
 
-  if (!projects) {
-    return redirect("/onboarding");
+  if (!data) {
+    redirect("/onboarding");
   }
 
   return (

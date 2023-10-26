@@ -9,10 +9,10 @@ export async function POST(request) {
   const supabase = createRouteHandlerClient({ cookies });
 
   const { error } = await supabase.rpc("add_user", {
-    id,
-    nombre,
-    apellido,
-    username,
+    _apellido: apellido,
+    _id: id,
+    _nombre: nombre,
+    _username: username,
   });
 
   if (error) {
@@ -22,7 +22,7 @@ export async function POST(request) {
         message: "No se pudo añadir a este usuario.",
         error,
       },
-      { status: 404 }
+      { status: 500 }
     );
   }
 

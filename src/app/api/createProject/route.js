@@ -9,9 +9,9 @@ export async function POST(request) {
   const supabase = createRouteHandlerClient({ cookies });
 
   const { error } = await supabase.rpc("add_project", {
-    id_user,
-    name,
-    description,
+    _description: description,
+    _id_user: id_user,
+    _name: name,
   });
 
   if (error) {
@@ -21,7 +21,7 @@ export async function POST(request) {
         message: "No se pudo añadir este proyecto.",
         error,
       },
-      { status: 404 }
+      { status: 500 }
     );
   }
 
