@@ -1,12 +1,16 @@
-"use client";
-import SidebarContent from "./SidebarContent";
-import { SidebarProvider } from "@/context/sidebar";
+import SidebarHeader from "./SidebarHeader";
+import SidebarNav from "./SidebarNav";
+import { IconChevronRight, IconChevronLeft } from "@tabler/icons-react";
 
 const Sidebar = () => {
   return (
-    <SidebarProvider>
-      <SidebarContent/>
-    </SidebarProvider>
+    <aside
+      id="default-sidebar"
+      className="flex flex-col px-3 h-screen justify-between bg-secondary w-[13%]"
+    >
+      <SidebarHeader />
+      <SidebarNav />
+    </aside>
   );
 };
 
