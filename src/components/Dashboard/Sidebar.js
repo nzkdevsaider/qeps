@@ -1,6 +1,6 @@
+import LogoutButton from "../Buttons/LogoutButton";
 import SidebarHeader from "./SidebarHeader";
 import SidebarNav from "./SidebarNav";
-import { IconChevronRight, IconChevronLeft } from "@tabler/icons-react";
 
 const Sidebar = () => {
   return (
@@ -10,6 +10,9 @@ const Sidebar = () => {
     >
       <SidebarHeader />
       <SidebarNav />
+      <div className="flex flex-row justify-center p-4">
+        <LogoutButton />
+      </div>
     </aside>
   );
 };
