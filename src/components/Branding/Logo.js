@@ -1,15 +1,21 @@
-import Image from "next/image";
-
-const Logo = ({ icon, width, height }) => {
-  return (
-    <div className="logo flex flex-row gap-4 items-center">
-      <Image
-        src={icon ? "/icon.svg" : "/logo.svg"}
-        alt="Logo"
-        width={width}
-        height={height}
-      />
-    </div>
+const Logo = ({ icon, black, width, height }) => {
+  const isBlack = black && "invert";
+  return icon ? (
+    <img
+      src="/icon.svg"
+      className={`${isBlack}`}
+      alt="Icon"
+      width={width}
+      height={height}
+    />
+  ) : (
+    <img
+      src="/logo.svg"
+      className={`${isBlack}`}
+      alt="Logo"
+      width={width}
+      height={height}
+    />
   );
 };
 

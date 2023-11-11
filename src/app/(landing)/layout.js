@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
-import NavBar from "@/components/UserView/NavBar";
+import NavBar from "@/components/Landing/NavBar";
 import "@/assets/globals.css";
-import Footer from "@/components/UserView/Footer";
+import Footer from "@/components/Landing/Footer";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 

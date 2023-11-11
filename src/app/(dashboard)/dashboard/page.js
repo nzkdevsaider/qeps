@@ -28,7 +28,7 @@ const ProjectSelectorPage = async () => {
         </CardHeader>
         <CardContent>
           {projects.map((project) => (
-            <Card key={project.id}>
+            <div key={project.id}>
               {project.proyecto_info.map((info) => (
                 <>
                   <CardTitle key={info.id}>{info.name}</CardTitle>
@@ -37,7 +37,7 @@ const ProjectSelectorPage = async () => {
                   </CardDescription>
                 </>
               ))}
-            </Card>
+            </div>
           ))}
         </CardContent>
       </Card>
