@@ -34,6 +34,7 @@
   "devDependencies": {
     "@types/react": "18.2.23",
     "supabase": "^1.106.1",
+    "tailwindcss-bg-patterns": "^0.3.0",
     "typescript": "5.2.2"
   }
 }

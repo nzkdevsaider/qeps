@@ -38,7 +38,7 @@ export default async function Home() {
       {/* Hero */}
       <div className="container">
         <div className="flex flex-col justify-center items-center gap-10 py-10">
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-5xl font-bold text-center">
             El{" "}
             <div className="relative inline-block">
               <span>CRM ideal</span>
@@ -56,9 +56,9 @@ export default async function Home() {
         </div>
       </div>
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mx-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:mx-14">
           {items.map((item, index) => (
-            <div key={index} className="container space-y-5">
+            <div key={index} className="flex flex-col justify-center gap-5">
               <item.icon
                 className="text-white bg-black rounded-md p-3"
                 size={70}
