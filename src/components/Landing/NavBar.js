@@ -5,6 +5,20 @@ import { Button } from "../ui/button";
 import { IconMenu2 } from "@tabler/icons-react";
 import { useState } from "react";
 
+const items = [
+  {
+    title: "Producto",
+    href: "/",
+  },
+  {
+    title: "Caracteristicas",
+    href: "#features",
+  },
+  {
+    title: "Precios",
+    href: "/",
+  },
+];
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -12,9 +26,11 @@ const NavBar = () => {
     <navbar className="flex px-10 md:px-52 py-5 justify-between items-center flex-row">
       <Logo black icon height={90} width={90} />
       <div className="space-x-5 hidden md:block">
-        <Button variant="ghost">Producto</Button>
-        <Button variant="ghost">Caracteristicas</Button>
-        <Button variant="ghost">Precios</Button>
+        {items.map((item, index) => (
+          <Link href={item.href} key={index}>
+            <Button variant="ghost">{item.title}</Button>
+          </Link>
+        ))}
       </div>
       <Link href="/login">
         <Button className="hidden md:block">Iniciar Sesión</Button>
@@ -34,9 +50,14 @@ const NavBar = () => {
           </Button>
         </div>
         <div className="flex flex-col space-y-3 my-3 px-3">
-          <Button variant="outline">Producto</Button>
-          <Button variant="outline">Caracteristicas</Button>
-          <Button variant="outline">Precios</Button>
+          {items.map((item, index) => (
+            <Link href={item.href} key={index}>
+              <Button className="w-full" variant="outline">
+                {item.title}
+              </Button>
+            </Link>
+          ))}
+
           <Button>Iniciar Sesión</Button>
         </div>
       </div>

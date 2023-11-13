@@ -55,7 +55,7 @@ export default async function Home() {
           <Image src="./assets/un_line.svg" width={800} height={800} />
         </div>
       </div>
-      <div className="container">
+      <div className="container" id="features">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:mx-14">
           {items.map((item, index) => (
             <div key={index} className="flex flex-col justify-center gap-5">
